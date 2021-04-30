@@ -1,0 +1,47 @@
+*{
+  box-sizing: border-box;
+}
+
+#particles-js{
+    height: 1000px;
+    width: 100%;
+    background: linear-gradient(to bottom ,rgba(0, 0, 0, 0.021) , rgba(0, 0, 0, 0.932)), url(../../assets/img/loginbg1.jpg);
+    background-size: cover;
+    background-position: center;
+  position: relative;
+}
+
+.img1{
+  width: 100px;
+  height: 100px;
+  opacity: 0.8;
+  margin-bottom: 25px;
+}
+
+@media only screen and (max-width: 600px) {
+  .login-dark form {
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 58%;
+    left: 50%;
+  }
+}
+
+#navlinks{
+  color: #ffffff;
+  vertical-align: middle;
+  text-transform: uppercase;
+}
+
+#navlogo{
+  background-repeat: no-repeat;
+  width: 100px;
+  height: 100px;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  background-image: url("../../assets/img/logo\ w\ new.png");
+  margin-left: 0px;
+  padding-left: 0;
+  vertical-align: middle;
+}

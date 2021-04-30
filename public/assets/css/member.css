@@ -1,0 +1,117 @@
+
+#navlinks {
+    color:white;
+  }
+
+  #navlinks:hover{
+      border-bottom: 1px solid white;
+  }
+
+  
+@media (max-width:600px){
+    #navlinks:hover{
+      border-bottom: none;
+    }
+}
+
+#bg1{
+    background-color: #0077b6;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    position: relative;
+    top: 48%;
+    left: -7%;
+}
+.heading{
+    color: white;
+        position: relative;
+        top: 5%;
+        left: 4%;
+}
+
+#img1{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    position: relative;
+    top: 48%;
+    left: -9%;
+}
+
+@media (max-width:1590px){
+  .heading{
+     position: relative;
+     top: 10%;
+     left: 2%;
+  }
+  #img1{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    position: relative;
+    top: 48%;
+    left: -12%;
+}
+}
+@media (max-width:510px){
+    .heading{
+       position: relative;
+       top: 10%;
+       left: 15%;
+    }
+    #img{
+        left: -20%;
+    }
+    #img1{
+        left: -30%;
+    }
+  }
+
+  .usercard{
+      margin-top: 90px;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: 90px;
+  }
+
+  .cardimg{
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+  }
+
+  @media (max-width:510px){
+    .usercard{
+      margin-left: 100px;
+    }
+
+  }
+  .newsection{
+      padding-top: 80px;
+  }
+  .noticeform{
+      width: 60%;
+      margin-left: 20%;
+  }
+  .button{
+      margin-top: 20px;
+  }
+  .formdiv{
+      text-align: center;
+      margin-top: 20px;
+  }
+
+  .centercard {
+      margin: 25px;
+  }
+
+  

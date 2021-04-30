@@ -1,0 +1,29 @@
+#statuscard {
+  display: flex;
+  justify-content: space-between;
+}
+
+#icon {
+  font-size: 15px;
+}
+
+#sidenavlinks {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+#navusername {
+  font-weight: 600;
+  font-family: "Montserrat";
+}
+
+.bg__avatar {
+  width: 70%;
+  height: 120px;
+  background-image: url("../img/avatar.gif");
+}
+
+.event {
+  pointer-events: none;
+  background-color: #eaecf4;
+}
