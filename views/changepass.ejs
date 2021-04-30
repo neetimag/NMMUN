@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+    <title>
+        <%= pagetitle %>
+    </title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/fonts/ionicons.min.css" />
+    <link rel="stylesheet" href="assets/css/Login-Form-Dark.css" />
+    <link rel="stylesheet" href="assets/css/formstyles.css" />
+    <link rel="icon" href="favicon.png" type="image/png" sizes="128x128">
+</head>
+
+<body>
+    <% if(error) { %>
+        <div style="text-align: center; margin-bottom: 0%;" class="alert alert-warning">
+            <strong> <%= error %></strong>
+        </div>
+        <% } %>
+            <div id="particles-js">
+
+                <nav class="navbar navbar-light navbar-expand-md" id="navbar">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" id="navlogo" href="/"></a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1">
+    <span class="sr-only">Toggle navigation</span
+    ><span class="navbar-toggler-icon"></span>
+  </button>
+                    </div>
+                </nav>
+                <div class="login-dark">
+                    <form method="POST" action="/resetpass">
+                        <h2 class="sr-only">Login Form</h2>
+                        <div class="illustration">
+                            <img class="img1" src="/assets/img/logo b.png" />
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control" type="email" name="email" placeholder="Enter your registered Email" />
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-primary btn-block" type="submit">
+              Send
+            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <script src="assets/js/jquery.min.js"></script>
+            <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+            <script src="/assets/js/particles.js"></script>
+            <script src="/assets/js/app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+    <link rel="icon" href="favicon.png" type="image/png" sizes="128x128">
+    <title>admin</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600"
+    />
+    <link rel="stylesheet" href="assets/css/member.css" />
+  </head>
+
+  <body style="font-family: Montserrat, sans-serif;">
+    <section id="bg1">
+      <%- include('./navbar'); %>
+      <h1 class="heading">SEND NOTICE</h1>
+      <img id="img1" src="assets/img/13568-animated-loader.gif" />
+    </section>
+    <section class="newsection">
+            <form class="noticeform" action="/notice" method="POST" enctype="multipart/form-data">
+                <div class="form-group">
+                  <label for="title">TITLE </label>
+                  <input class="form-control" type="text" name="title">
+                </div>
+                <div class="form-group">
+                  <input class="form-control" type="file" name="pdfdoc">
+                </div>
+                <button type="submit" class="btn btn-primary button" style="background-color: #0077b6;">Submit</button>
+              </form>
+      
+    </section>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+  </body>
+</html>

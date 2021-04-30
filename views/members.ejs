@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+    <title>admin</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600" />
+    <link rel="icon" href="favicon.png" type="image/png" sizes="128x128" />
+    <link rel="stylesheet" href="assets/css/member.css" />
+</head>
+
+<body style="font-family: Montserrat, sans-serif">
+    <section id="bg1">
+        <%- include('./navbar'); %>
+            <h1 class="heading">MEMBERS</h1>
+            <img id="img" src="assets/img/13568-animated-loader.gif" />
+    </section>
+    <section class="section2">
+        <div class="row">
+            <% for(let member of users) { %>
+
+                <div class="card usercard" style="width: 18rem">
+                    <img class="card-img-top cardimg" src="assets/img/member.png" alt="Card image cap" />
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <%= member.firstname %>
+                                <%= member.lastname %>
+                        </h5>
+                        <div class="modal fade" id="exampleModalCenter<%=member._id%>" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLongTitle">
+                                            <%= member.firstname %>
+                                                <%= member.lastname %>
+                                        </h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p class="card-text">
+                                            Contact number :-
+                                            <%= member.contact %>
+                                        </p>
+                                        <p class="card-text">Email :-
+                                            <%= member.email %>
+                                        </p>
+                                        <p class="card-text">
+                                            Username :-
+                                            <%= member.username ? member.username : '' %>
+                                        </p>
+                                        <p class="card-text">Address :-
+                                            <%= member.address %>
+                                        </p>
+                                        <div style="margin: 15px; border: 1px solid rgb(177, 177, 177);">
+                                            <p class="card-text">
+                                                Committe1 :-
+                                                <%= member.committee1 %>
+                                            </p>
+                                            <span><%= member.prefrence11 %> | <%= member.prefrence12 %> |
+                        <%= member.prefrence13 %>
+                      </span>
+                                        </div>
+                                        <div style="margin: 15px; border: 1px solid rgb(177, 177, 177);">
+                                            <p class="card-text">
+                                                Committe2 :-
+                                                <%= member.committee2 %>
+                                            </p>
+                                            <span><%= member.prefrence21 %> | <%= member.prefrence22 %> |
+                        <%= member.prefrence23 %>
+                      </span>
+                                        </div>
+                                        <div style="margin: 15px; border: 1px solid rgb(177, 177, 177);">
+                                            <p class="card-text">
+                                                Committe3 :-
+                                                <%= member.committee3 %>
+                                            </p>
+                                            <span><%= member.prefrence31 %> | <%= member.prefrence32 %> |
+                        <%= member.prefrence33 %>
+                      </span>
+                                        </div>
+                                        <p class="card-text">
+                                            Transaction Date :-
+                                            <%= member.transdate %>
+                                        </p>
+                                        <p class="card-text">
+                                            Past Experience :-
+                                            <%= member.pastexp %>
+                                        </p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                      Close
+                    </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter<%=member._id%>" style="background-color: #0077b6">View all Details</a
+            >
+          </div>
+        </div>
+        <% } %>
+      </div>
+    </section>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+  </body>
+</html>

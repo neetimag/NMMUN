@@ -1,0 +1,38 @@
+<tr>
+              <td>
+                <h6 style="margin-right: auto !important; margin-left: auto !important; padding: 10px">Agenda:- "I dont even know it yet" </h6>
+              </td>
+              </tr>
+            <tr style="margin-bottom: 40px !important;">
+            <td>
+              <div style="margin-left: auto !important; margin-right: auto !important; padding: 10px !important;">
+              <div>
+                <img  src="assets/img/komal_director.png" alt="Avatar" style="border-radius: 50%">
+                <p style="margin-left: 30px;">
+                  Name of the eb <br>
+                  executive board
+                </p>
+             </div>
+              
+              <div  class="eb2"><img  src="assets/img/komal_director.png" alt="Avatar" style="border-radius: 50%">
+                <p style="margin-left: 30px;">
+                  Name of the eb <br>
+                  executive board
+                </p>
+                </div>
+                </div>
+             <div class="eb3"><h6 style="center">
+            Word From EB  
+            </h6>
+            <p>
+              kuch bhi likhdo kuch bhi likhdo kuch bhi likhdo
+              kuch bhi likhdo kuch bhi likhdo kuch bhi likhdo
+              kuch bhi likhdo kuch bhi likhdo kuch bhi likhdo
+              kuch bhi likhdo kuch bhi likhdo kuch bhi likhdo
+              kuch bhi likhdo kuch bhi likhdo kuch bhi likhdo
+              </p>
+              </div>
+             
+              </td>
+              
+              </tr>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+    <link rel="icon" href="favicon.png" type="image/png" sizes="128x128" />
+    <title>Notifications</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600"
+    />
+    <link rel="stylesheet" href="assets/css/member.css" />
+  </head>
+
+  <body style="font-family: Montserrat, sans-serif">
+    <%if(isadmin) { %>
+    <div
+      style="background-color: #0077b6 !important; height: 100px; width: 100%"
+    >
+      <%- include('./navbar'); %>
+    </div>
+    <% } %> <%if(notices.length === 0) { %>
+    <h1 style="text-align: center; vertical-align: middle">EMPTY!!</h1>
+    <% } else { %> <% for(let notice of notices) { %>
+    <div class="centercard">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title"><%= notice.title %></h5>
+          <div style="margin-top: 1rem">
+            <% if(isadmin) { %>
+            <!-- <a  href="/deletemail/<%=notice._id %>" class="btn btn-primary">DELETE</a> -->
+            <button
+              type="button"
+              class="btn btn-primary"
+              data-toggle="modal"
+              data-target="#exampleModal"
+              style="background-color: #0077b6"
+            >
+              DELETE
+            </button>
+            <% } %>
+            <a
+              style="display: inline-block; margin-left: 6rem; margin-top: 2rem"
+              href="/download/<%= notice._id%>"
+              >Download</a
+            >
+
+            <div
+              class="modal fade"
+              id="exampleModal"
+              tabindex="-1"
+              role="dialog"
+              aria-labelledby="exampleModalLabel"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">
+                      <%= notice.title %>
+                    </h5>
+                    <button
+                      type="button"
+                      class="close"
+                      data-dismiss="modal"
+                      aria-label="Close"
+                    >
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    Are you really want to delete this record? This process
+                    cannot be undone
+                  </div>
+                  <div class="modal-footer">
+                    <button
+                      type="button"
+                      class="btn btn-secondary"
+                      data-dismiss="modal"
+                    >
+                      cancel
+                    </button>
+                    <a
+                      href="/deletemail/<%=notice._id %>"
+                      class="btn btn-primary"
+                      style="background-color: #0077b6"
+                      >delete</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <% } %> <% } %>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+  </body>
+</html>

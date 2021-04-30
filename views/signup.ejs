@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+    <title>
+        <%= pagetitle %>
+    </title>
+    <link rel="icon" href="favicon.png" type="image/png" sizes="128x128">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/fonts/ionicons.min.css" />
+    <link rel="stylesheet" href="assets/css/Login-Form-Dark.css" />
+    <link rel="stylesheet" href="assets/css/Footer-Basic.css">
+    <link rel="stylesheet" href="assets/css/formstyles.css" />
+</head>
+
+<body>
+    <% if(error) { %>
+        <div style="text-align: center; margin-bottom: 0%;" class="alert alert-warning">
+            <strong> <%= error %></strong>
+        </div>
+        <% } %>
+            <div id="particles-js">
+                <nav class="navbar navbar-light navbar-expand-md" id="navbar">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" id="navlogo" href="/"></a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+                    </div>
+                </nav>
+                <div class="login-dark">
+                    <form method="post" action="/signup">
+                        <h2 class="sr-only">Login Form</h2>
+                        <div class="illustration">
+                            <img class="img1" src="/assets/img/logo b.png" />
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control" type="text" name="fname" placeholder="First Name" value="<%=oldinput.fname%>" />
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control" type="text" name="lname" placeholder="Last Name" value="<%=oldinput.lname%>" />
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control" type="tel" name="contact" placeholder="Contact Number" value="<%=oldinput.contact%>" />
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control" type="email" name="email" placeholder="Email" value="<%=oldinput.email%>" />
+                        </div>
+                        <div class="form-group">
+                            <input id="pass" class="form-control" type="password" name="password" placeholder="Password" />
+                        </div>
+                        <div style="display: flex; align-items: center; margin-top: 10px; justify-content: flex-start;">
+                            <input style="margin-left: 3px;" onclick="showpass('pass')" type="checkbox" /><span style="
+                font-size: xx-small;
+                color: black;
+                padding-left: 5px;
+              ">show password</span
+            >
+          </div>
+          <div class="form-group">
+            <input
+             id="conpass"
+              class="form-control"
+              type="password"
+              name="confirmpassword"
+              placeholder="Confirm Password"
+            />
+          </div>
+          <div style="display: flex; align-items: center; margin-top: 10px; justify-content: flex-start;">
+            
+          </div>
+          <div class="form-group">
+            <button class="btn btn-primary btn-block" type="submit">
+              Sign Up
+            </button>
+          </div>
+          <a class="forgot" href="/login"
+            >You already have an account? Login here.</a
+          >
+        </form>
+      </div>
+    </div>
+    <div class="footer-basic ">
+      <footer>
+          <div class="social "><a href="https://instagram.com/narseemonjeemun?igshid=1waoht915rn8x"><i class="icon ion-social-instagram "></i></a><a href="https://twitter.com/narseemonjeemun?s=08"><i class="icon ion-social-twitter "></i></a>
+              <a href="https://www.facebook.com/494536580629527/"><i class="icon ion-social-facebook "></i></a>
+              <a href="https://www.linkedin.com/company/nmmun"><i class="icon ion-social-linkedin "></i></a>
+          </div>
+          <ul class="list-inline ">
+              <li class="list-inline-item "><a href="/">NMMUN</a></li>
+              <li class="list-inline-item "><a href="#sec3com">Team</a></li>
+              <li class="list-inline-item "><a href="#sec4head">Committees</a></li>
+          </ul>
+          <p class="text-center " id="footerpara ">All Rights Reserved by NMMUN<br></p>
+      </footer>
+
+      <script>
+        
+     function showpass(id){
+        var x = document.getElementById(id);
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+      }
+
+      </script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/assets/js/particles.js"></script>
+    <script src="/assets/js/app.js"></script>
+  </body>
+</html>
